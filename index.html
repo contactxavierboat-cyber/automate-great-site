@@ -25,6 +25,7 @@
 <meta name="twitter:description" content="Automate Great builds your automated lead pipeline: offer, CRM and calendar, follow-up, funnel, content and ads. Fixed price, live in 10 business days. Miami, FL.">
 <meta name="twitter:image" content="https://automategreat.com/img/og-share.png">
 <meta name="twitter:image:alt" content="The shops that automate with AI win. Automate Great.">
+<link rel="preload" href="img/hero-poster.webp" as="image" type="image/webp" fetchpriority="high">
 <link rel="preload" href="fonts/InterTight-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
@@ -108,6 +109,19 @@
  ]
 }
 </script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "VideoObject",
+ "name": "How we built automategreat.com, its funnel and its follow-ups",
+ "description": "A 48-second walkthrough: the site, the funnel and the follow-ups built by AI agents with a human approving every step, ending with our own test lead getting an email two seconds after the form.",
+ "thumbnailUrl": "https://automategreat.com/img/hero-poster.jpg",
+ "contentUrl": "https://automategreat.com/media/walkthrough-1728.mp4",
+ "uploadDate": "2026-11-03",
+ "duration": "PT48S",
+ "publisher": {"@id": "https://automategreat.com/#org"}
+}
+</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -129,13 +143,29 @@
 
 <section class="hero">
   <div class="orb" aria-hidden="true"></div>
-  <p class="mono eyebrow accent rv">Automate Great</p>
-  <h1 class="rv"><span class="ln">The shops that automate</span> <span class="ln dim">with AI win.</span></h1>
-  <p class="lead rv">We build your automated pipeline. Fixed price. Live in 10 business days.</p>
-  <div class="cta-row rv">
-    <a class="btn btn-primary" href="https://go.automategreat.com/start">Book a free 20-min call <span class="arr">→</span></a>
+  <div class="hero-copy">
+    <p class="mono eyebrow accent rv">Automate Great</p>
+    <h1 class="rv"><span class="ln">The shops that automate</span> <span class="ln dim">with AI win.</span></h1>
+    <p class="lead rv">We build your automated pipeline. Fixed price. Live in 10 business days.</p>
+    <div class="cta-row rv">
+      <a class="btn btn-primary" href="https://go.automategreat.com/start">Book a free 20-min call <span class="arr">→</span></a>
+    </div>
+    <p class="under rv">For businesses that intend to exist in 2030. Price in writing. You own every account.</p>
   </div>
-  <p class="under rv">For businesses that intend to exist in 2030. Price in writing. You own every account.</p>
+  <figure class="hero-media">
+    <div class="walk hero-walk"><div class="walk-frame">
+      <video class="hero-video" muted autoplay loop playsinline preload="metadata" poster="img/hero-poster.webp" width="1728" height="1080" aria-label="48-second walkthrough of how we built this site, its funnel and its follow-ups, ending with our own test lead getting an email two seconds after the form.">
+        <source src="media/walkthrough-1728.webm" type="video/webm" media="(min-width:1024px)">
+        <source src="media/walkthrough-1728.mp4" type="video/mp4" media="(min-width:1024px)">
+        <source src="media/walkthrough-960.webm" type="video/webm">
+        <source src="media/walkthrough-960.mp4" type="video/mp4">
+        Lead in. Email out. 2 seconds.
+      </video>
+      <script>(function(v){if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){v.autoplay=false;v.removeAttribute('autoplay');v.preload='none';v.pause();}})(document.currentScript.previousElementSibling);</script>
+      <button class="mono vid-toggle" type="button" aria-label="Pause video" hidden>Pause</button>
+    </div></div>
+    <figcaption class="mono">Our own build and test lead, not a client result.</figcaption>
+  </figure>
 </section>
 
 <div class="marquee" aria-hidden="true"><div class="track">
@@ -230,7 +260,7 @@
   <h2 class="rv">We built the&nbsp;system<br> <span class="dim">the same way we’ll build&nbsp;yours.</span></h2>
   <figure class="walk rv">
     <div class="walk-frame">
-      <span class="mono walk-tag">Walkthrough</span>
+      <span class="mono walk-tag">This site</span>
       <picture><source media="(max-width:820px)" srcset="img/proof-this-site-mobile.webp" width="780" height="1377"><img src="img/proof-this-site.webp" alt="Screenshot of the Automate Great pipeline diagram: content, paid ads, funnel, follow-up, calendar, close, fulfill and review" width="1440" height="900" loading="lazy"></picture>
     </div>
     <figcaption>A human approved every step.</figcaption>
