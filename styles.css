@@ -1,6 +1,6 @@
 /* Automate Great · site v5 · DRAFT, local only. Tokens mirror ../brand-guide.md */
-@font-face{font-family:"Inter Tight";src:url(fonts/InterTight-Variable.ttf) format("truetype");font-weight:100 900;font-display:swap}
-@font-face{font-family:"Geist Mono";src:url(fonts/GeistMono-VariableFont_wght.ttf) format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Inter Tight";src:url(fonts/InterTight-Variable.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url(fonts/GeistMono-VariableFont_wght.woff2) format("woff2");font-weight:100 900;font-display:swap}
 :root{
   /* near-black ramp */
   --ink-0:#050506; --ink-1:#0a0a0b; --ink-2:#111113; --ink-3:#18181b; --ink-4:#232327;
