@@ -132,4 +132,24 @@
     var body = pick ? 'What I want: ' + pick.textContent.trim() : '';
     window.location.href = 'mailto:info@automategreat.com?subject=' + encodeURIComponent('Automate Great - Book a call') + (body ? '&body=' + encodeURIComponent(body) : '');
   });
+  /* v19: hero walkthrough video. Reduced motion = static poster, play only on request.
+     Pause/Play control (WCAG 2.2.2), and pause while scrolled off-screen. */
+  var hv = document.querySelector('.hero-video'), hb = document.querySelector('.vid-toggle');
+  if (hv && hb) {
+    var userPaused = reduce;
+    function sync() { var p = hv.paused; hb.textContent = p ? 'Play' : 'Pause'; hb.setAttribute('aria-label', p ? 'Play video' : 'Pause video'); }
+    hb.hidden = false;
+    if (reduce) { hv.autoplay = false; hv.pause(); }
+    hb.addEventListener('click', function () {
+      if (hv.paused) { userPaused = false; hv.preload = 'auto'; var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {}); }
+      else { userPaused = true; hv.pause(); }
+    });
+    hv.addEventListener('play', sync); hv.addEventListener('pause', sync); sync();
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (userPaused) return;
+        if (e.isIntersecting) { var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {}); } else hv.pause();
+      });
+    }, { threshold: 0.15 }).observe(hv);
+  }
 })();
