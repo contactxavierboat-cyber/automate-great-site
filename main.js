@@ -130,6 +130,6 @@
     e.preventDefault();
     var pick = f.querySelector('.chip[aria-pressed="true"]');
     var body = pick ? 'What I want: ' + pick.textContent.trim() : '';
-    window.location.href = 'mailto:info@10outof100.com?subject=' + encodeURIComponent('Automate Great - Book a call') + (body ? '&body=' + encodeURIComponent(body) : '');
+    window.location.href = 'mailto:info@automategreat.com?subject=' + encodeURIComponent('Automate Great - Book a call') + (body ? '&body=' + encodeURIComponent(body) : '');
   });
 })();
