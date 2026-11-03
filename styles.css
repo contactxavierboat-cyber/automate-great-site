@@ -402,7 +402,7 @@ footer .disclosure{font-size:13px;color:var(--text-4);max-width:60ch}
   #problem .stats,#terms .promises{margin-top:var(--s-7)}
 }
 
-/* v11: pipeline diagram (after Xavier's offer-structure sheet) */
+/* v11: pipeline diagram */
 .flow{margin:var(--s-7) auto 0;max-width:1000px;--g:28px;text-align:left}
 .flow-row{display:grid;grid-template-columns:repeat(8,1fr);column-gap:var(--g);padding-top:30px}
 .node{grid-column:var(--i);grid-row:1;position:relative;z-index:2;background:var(--ink-0);border:1px solid var(--line-strong);border-radius:8px;padding:12px 8px;text-align:center;display:flex;flex-direction:column;justify-content:center;min-height:62px}
