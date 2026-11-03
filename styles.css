@@ -448,3 +448,31 @@ footer .disclosure{font-size:13px;color:var(--text-4);max-width:60ch}
 #cost .stat .num{font-size:clamp(44px,4.6vw,62px);white-space:nowrap}
 #cost{padding-bottom:var(--s-9)}
 @media (max-width:820px){#cost{padding-top:var(--s-8);padding-bottom:var(--s-8)}}
+
+/* ===== v12 ===== */
+.node .auto{font-size:8px;letter-spacing:.03em;padding:1px 5px}
+.loop-note{display:none}
+.build-box h4{font-size:22px}
+.build-box .sub{color:var(--text-1);font-size:15px;margin-top:4px}
+.incl{list-style:none;margin:var(--s-4) auto 0;font-size:14.5px;color:var(--text-2)}
+.incl li{padding:5px 0;border-top:1px solid var(--line)}
+.incl li:first-child{border-top:0}
+.build-box .fine{margin-top:var(--s-3);font-size:13.5px;color:var(--text-3)}
+.price-grid .cell{display:flex;flex-direction:column;justify-content:center}
+.pay{margin-top:var(--s-4);font-size:15px;color:var(--text-1)}
+.smaller{margin-top:var(--s-6);font-size:15px;color:var(--text-3)}
+/* cost tiles: 2 or 3 tiles both look intentional */
+.cost-stats{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:1fr}
+.cost-stats:has(> .stat:nth-child(2):last-child){max-width:760px;margin-left:auto;margin-right:auto}
+@media (max-width:900px){
+  .flow-row{padding-right:0}
+  .loop{display:none}
+  .loop-note{display:block;margin-top:44px;text-align:center;color:var(--red);font-size:10px;letter-spacing:.06em;text-transform:lowercase}
+  .offer-bar{margin-top:var(--s-4)}
+  .node{padding:11px 14px}
+  .node .auto{font-size:8.5px}
+  .badge{right:-8px}
+}
+@media (max-width:820px){
+  .cost-stats{grid-auto-flow:row;grid-template-columns:1fr}
+}
