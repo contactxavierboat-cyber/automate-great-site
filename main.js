@@ -132,24 +132,30 @@
     var body = pick ? 'What I want: ' + pick.textContent.trim() : '';
     window.location.href = 'mailto:info@automategreat.com?subject=' + encodeURIComponent('Automate Great - Book a call') + (body ? '&body=' + encodeURIComponent(body) : '');
   });
-  /* v19: hero walkthrough video. Reduced motion = static poster, play only on request.
-     Pause/Play control (WCAG 2.2.2), and pause while scrolled off-screen. */
+  /* v20: hero Pipeline video. Silent product loop: always autoplays (muted, inline).
+     If the browser blocks autoplay (e.g. iPhone Low Power Mode), start on first touch/scroll.
+     Pause/Play control (WCAG 2.2.2); pauses while scrolled off-screen. */
   var hv = document.querySelector('.hero-video'), hb = document.querySelector('.vid-toggle');
-  if (hv && hb) {
-    var userPaused = reduce;
-    function sync() { var p = hv.paused; hb.textContent = p ? 'Play' : 'Pause'; hb.setAttribute('aria-label', p ? 'Play video' : 'Pause video'); }
-    hb.hidden = false;
-    if (reduce) { hv.autoplay = false; hv.pause(); }
-    hb.addEventListener('click', function () {
-      if (hv.paused) { userPaused = false; hv.preload = 'auto'; var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {}); }
-      else { userPaused = true; hv.pause(); }
+  if (hv) {
+    var userPaused = false;
+    hv.muted = true; hv.defaultMuted = true; hv.setAttribute('muted', ''); hv.playsInline = true; hv.preload = 'auto';
+    function tryPlay() { if (userPaused) return; var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {}); }
+    function sync() { if (!hb) return; var p = hv.paused; hb.textContent = p ? 'Play' : 'Pause'; hb.setAttribute('aria-label', p ? 'Play video' : 'Pause video'); }
+    tryPlay();
+    hv.addEventListener('loadeddata', tryPlay); hv.addEventListener('canplay', tryPlay);
+    ['touchstart', 'pointerdown', 'scroll', 'keydown'].forEach(function (ev) {
+      window.addEventListener(ev, function once() { if (hv.paused) tryPlay(); }, { passive: true, once: true });
     });
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) tryPlay(); });
+    if (hb) {
+      hb.hidden = false;
+      hb.addEventListener('click', function () {
+        if (hv.paused) { userPaused = false; tryPlay(); } else { userPaused = true; hv.pause(); }
+      });
+    }
     hv.addEventListener('play', sync); hv.addEventListener('pause', sync); sync();
     if ('IntersectionObserver' in window) new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (userPaused) return;
-        if (e.isIntersecting) { var pr = hv.play(); if (pr && pr.catch) pr.catch(function () {}); } else hv.pause();
-      });
+      es.forEach(function (e) { if (userPaused) return; if (e.isIntersecting) tryPlay(); else hv.pause(); });
     }, { threshold: 0.15 }).observe(hv);
   }
 })();
