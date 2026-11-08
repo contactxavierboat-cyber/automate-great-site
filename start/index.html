@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 7 pm Friday Test · Automate Great</title>
+<meta name="description" content="With your permission, we call your business line and fill out your form Friday at 7 pm like a customer. Monday you get a 3-minute video of what happened, what we'd fix, and the price in writing.">
+<link rel="canonical" href="https://automategreat.com/start/">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#050506">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Automate Great">
+<meta property="og:url" content="https://automategreat.com/start/">
+<meta property="og:title" content="The 7 pm Friday Test · Automate Great">
+<meta property="og:description" content="We test your line like a customer Friday at 7 pm. Monday: a 3-minute video of what happened, what we'd fix, and the price in writing.">
+<meta property="og:image" content="https://automategreat.com/img/og-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The 7 pm Friday Test · Automate Great">
+<meta name="twitter:description" content="We test your line like a customer Friday at 7 pm. Monday: a 3-minute video of what happened, what we'd fix, and the price in writing.">
+<meta name="twitter:image" content="https://automategreat.com/img/og-share.png">
+<link rel="preload" href="../fonts/InterTight-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../styles.css">
+<style>
+/* /start — form page */
+.start-hero{padding-bottom:var(--s-8)}
+.start-hero .hero-copy{max-width:760px;margin:0 auto;text-align:center}
+@media (min-width:1024px){
+  .hero.start-hero{display:block;text-align:center;padding:var(--s-9) var(--s-8)}
+  .hero.start-hero h1{max-width:900px;margin:0 auto}
+  .hero.start-hero .lead{margin-left:auto;margin-right:auto;max-width:640px}
+}
+.start-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s-8);align-items:start;text-align:left;margin-top:var(--s-8)}
+@media (max-width:860px){.start-grid{grid-template-columns:1fr}.start-grid .form-card{order:-1}}
+.how{border:1px solid var(--line);border-radius:var(--radius);background:var(--glass);padding:var(--s-7)}
+.how ol{list-style:none;padding:0;margin:var(--s-5) 0 0;display:grid;gap:var(--s-4)}
+.how li{display:grid;grid-template-columns:44px 1fr;gap:var(--s-4);align-items:start;padding-top:var(--s-4);border-top:1px solid var(--line)}
+.how li:first-child{border-top:0;padding-top:0}
+.how .n{font-family:var(--font-mono);font-size:11px;letter-spacing:var(--track-mono);color:var(--text-3);padding-top:4px}
+.how h4{margin:0 0 4px}
+.how p{margin:0;color:var(--text-2);font-size:15px}
+.terms-strip{margin-top:var(--s-6);display:grid;gap:8px;font-size:14px;color:var(--text-2)}
+.terms-strip span::before{content:"— ";color:var(--red)}
+.form-card{border:1px solid var(--line-strong);border-radius:12px;background:var(--ink-0);box-shadow:0 30px 80px -30px rgba(0,0,0,.8);overflow:hidden}
+.form-card .bar{display:flex;gap:6px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+.form-card .bar i{width:9px;height:9px;border-radius:50%;background:var(--ink-4)}
+.form-card .bar span{margin-left:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:var(--track-mono);text-transform:uppercase;color:var(--text-3)}
+.form-card form{padding:var(--s-6)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--s-4);align-items:end}
+.f-row .f>span{min-height:18px}
+.f-row .f>span b{font-weight:600}.f-row .f>span:not(:has(b)){color:var(--text-1);font-weight:600}
+@media (max-width:520px){.f-row{grid-template-columns:1fr}}
+.f{display:block;margin-top:var(--s-4)}
+.f:first-child{margin-top:0}
+.f>span{display:block;font-size:13px;color:var(--text-2);margin-bottom:6px}
+.f>span b{color:var(--text-1);font-weight:600}
+.f input,.f select{width:100%;appearance:none;-webkit-appearance:none;background:var(--ink-2);color:var(--text-1);border:1px solid var(--line-strong);border-radius:8px;padding:12px 14px;font:inherit;font-size:15px;line-height:1.3}
+.f select{background-image:linear-gradient(45deg,transparent 50%,var(--text-3) 50%),linear-gradient(135deg,var(--text-3) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+.f input::placeholder{color:var(--text-4)}
+.f input:focus,.f select:focus{outline:none;border-color:var(--paper);box-shadow:0 0 0 3px rgba(243,241,236,.08)}
+.f.bad input,.f.bad select{border-color:var(--red)}
+.chk{display:grid;grid-template-columns:20px 1fr;gap:12px;align-items:start;margin-top:var(--s-4);font-size:13px;color:var(--text-2);line-height:1.45}
+.chk input{width:18px;height:18px;margin-top:2px;accent-color:var(--red)}
+.chk.small{font-size:12px;color:var(--text-3)}
+.f-sub{margin-top:var(--s-5)}
+.f-sub .btn{width:100%;justify-content:center}
+.f-note{margin-top:10px;font-size:12px;color:var(--text-3);text-align:center}
+.f-err{display:none;margin-top:var(--s-4);padding:12px 14px;border:1px solid var(--red);border-radius:8px;color:var(--text-1);font-size:14px}
+.f-err.on{display:block}
+.divider{font-family:var(--font-mono);font-size:11px;letter-spacing:var(--track-mono);text-transform:uppercase;color:var(--text-3);margin:var(--s-5) 0 0;padding-top:var(--s-4);border-top:1px solid var(--line)}
+.btn[disabled]{opacity:.6;cursor:progress}
+</style>
+</head>
+<body class="seo-page">
+
+<header class="nav">
+  <div class="col">
+    <ul>
+      <li><a href="../pipeline/">The Pipeline</a></li>
+      <li><a href="../#proof">Our build</a></li>
+      <li><a href="../pipeline/#price">Price</a></li>
+      <li><a href="../#faq">Questions</a></li>
+    </ul>
+    <a class="logo" href="../" aria-label="Automate Great home"><img src="../img/logo-snake.svg" alt="" width="40" height="34"></a>
+    <div class="nav-cta nav-call"><a class="btn btn-primary" href="#test">Run my Friday Test</a></div>
+  </div>
+</header>
+
+<main class="col" id="top">
+
+<section class="hero start-hero">
+  <div class="orb" aria-hidden="true"></div>
+  <div class="hero-copy">
+    <p class="mono eyebrow accent">Free · Miami-Dade & Broward</p>
+    <h1><span class="ln">What happens to a lead</span> <span class="ln dim">at 7 pm Friday?</span></h1>
+    <p class="lead">With your permission, we call your business line and fill out your form Friday at 7 pm like a customer. Monday morning you get a 3-minute video: what happened to your lead, where it leaked, what we’d build, and the price in writing.</p>
+  </div>
+
+  <div class="start-grid">
+    <div class="how">
+      <p class="mono eyebrow">How the test works</p>
+      <ol>
+        <li><span class="n">01</span><div><h4>You fill out the form</h4><p>Business line, website, five quick questions. Two minutes.</p></div></li>
+        <li><span class="n">02</span><div><h4>Friday, 7 pm</h4><p>We call your number and submit your web form the way a customer would. We don’t say who we are until you see the video.</p></div></li>
+        <li><span class="n">03</span><div><h4>Monday, 8 am</h4><p>A 3-minute video lands in your inbox: what happened, what the Pipeline would do differently, and the price, in writing.</p></div></li>
+        <li><span class="n">04</span><div><h4>20 minutes, if you want it</h4><p>We walk through the video together and leave with a size, a price and a start date. Or you keep the video and walk.</p></div></li>
+      </ol>
+      <div class="terms-strip">
+        <span>Price in writing before any work.</span>
+        <span>Live in 10 business days. You own every account.</span>
+        <span>First five builds: the case study, second month of support free, price locked a year.</span>
+      </div>
+    </div>
+
+    <div class="form-card" id="test">
+      <div class="bar"><i></i><i></i><i></i><span>the 7 pm friday test</span></div>
+      <form id="fridayTest" novalidate>
+        <div class="f-row">
+          <label class="f"><span><b>First name</b></span><input name="first_name" type="text" autocomplete="given-name" required></label>
+          <label class="f"><span>Last name</span><input name="last_name" type="text" autocomplete="family-name"></label>
+        </div>
+        <label class="f"><span><b>Business name</b></span><input name="business_name" type="text" autocomplete="organization" required></label>
+        <div class="f-row">
+          <label class="f"><span><b>Business line we should test</b></span><input name="phone" type="tel" inputmode="tel" autocomplete="off" placeholder="(305) 555-0100" required></label>
+          <label class="f"><span><b>Confirm the number</b></span><input name="phone_confirm" type="tel" inputmode="tel" autocomplete="off" required></label>
+        </div>
+        <label class="f"><span><b>Email</b></span><input name="email" type="email" autocomplete="email" required></label>
+        <label class="f"><span>Website or Google Business link</span><input name="website" type="url" inputmode="url" placeholder="https://" autocomplete="url"></label>
+
+        <p class="divider">Five quick questions</p>
+
+        <label class="f"><span><b>What happens to a lead that comes in at 7 pm Friday?</b></span>
+          <select name="q_friday" required>
+            <option value="" selected disabled>Choose one</option>
+            <option value="Monday">We get to it Monday</option>
+            <option value="Not sure">Honestly, not sure</option>
+            <option value="Next morning">Next morning</option>
+            <option value="Within the hour">Within the hour</option>
+            <option value="Within minutes">Within minutes</option>
+          </select></label>
+        <label class="f"><span><b>How many people work in the business?</b></span>
+          <select name="q_headcount" required>
+            <option value="" selected disabled>Choose one</option>
+            <option value="1-4">1–4</option>
+            <option value="5-9">5–9</option>
+            <option value="10-24">10–24</option>
+            <option value="25-99">25–99</option>
+            <option value="100+">100+</option>
+          </select></label>
+        <label class="f"><span><b>Roughly how many new leads or inquiries a month?</b></span>
+          <select name="q_leads" required>
+            <option value="" selected disabled>Choose one</option>
+            <option value="Under 10">Under 10</option>
+            <option value="10-30">10–30</option>
+            <option value="30-100">30–100</option>
+            <option value="100+">100+</option>
+          </select></label>
+        <label class="f"><span><b>If it’s a fit, could the business invest about $4,500 (half to start) in the next 30 days?</b></span>
+          <select name="q_invest" required>
+            <option value="" selected disabled>Choose one</option>
+            <option value="Yes">Yes</option>
+            <option value="Probably">Probably — need to see it first</option>
+            <option value="Not at that level">Not at that level</option>
+          </select></label>
+        <label class="f"><span><b>Who else would need to sign off?</b></span>
+          <select name="q_signoff" required>
+            <option value="" selected disabled>Choose one</option>
+            <option value="Just me">Just me</option>
+            <option value="One partner">One partner</option>
+            <option value="Manager or committee">A manager or committee</option>
+          </select></label>
+
+        <label class="chk"><input name="friday_test_ok" type="checkbox" value="yes" required><span><b>Yes</b> — you may call my business line and submit my web form on Friday at 7 pm as a test customer.</span></label>
+        <label class="chk small"><input name="sms_consent" type="checkbox" value="yes" required><span>Automate Great (10 Percenters LLC): by checking this box, I agree to receive customer care text messages from Automate Great (10 Percenters LLC) about my inquiry, including appointment reminders and replies to my questions. Message frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help. You must be 18 or older. See our <a href="../privacy/">Privacy Policy</a> and <a href="../terms/">Terms</a>.</span></label>
+
+        <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="referrer"><input type="hidden" name="ag_score"><input type="hidden" name="ag_tier"><input type="hidden" name="page" value="automategreat.com/start">
+        <input type="text" name="company_fax" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+
+        <div class="f-err" id="formErr" role="alert"></div>
+        <div class="f-sub"><button class="btn btn-primary" type="submit" id="submitBtn">Run my 7 pm Friday Test <span class="arr">→</span></button></div>
+        <p class="f-note">No cost. We never text your customers, only you. Reply STOP any time.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <span class="cross l"></span><span class="cross r"></span>
+  <p class="mono eyebrow rv">Why a test instead of a pitch</p>
+  <h2 class="rv">You can’t see the leak <span class="dim">from inside the office.</span></h2>
+  <div class="promises rv">
+    <div><h4>The average reply is 42 hours</h4><p>Harvard Business Review audited 2,241 companies. The average response to a web lead was 42 hours; 23% never replied at all.</p></div>
+    <div><h4>The lead doesn’t leave a voicemail</h4><p>They call the next shop on Google. Nobody in your office sees the job that didn’t happen.</p></div>
+    <div><h4>You keep the video either way</h4><p>Walk away with it, hand it to your office manager, or let us build the fix. Price in writing before a dollar moves.</p></div>
+  </div>
+</section>
+
+<section id="faq">
+  <span class="cross l"></span><span class="cross r"></span>
+  <p class="mono eyebrow rv">Questions</p>
+  <h2 class="rv">Straight answers.</h2>
+  <div class="faq rv">
+    <details><summary>Will my staff know it’s a test?</summary><p>Only if you tell them. We call once, we’re polite, we ask what a real customer asks, and we leave a callback number. Nothing that creates work for your team.</p></details>
+    <details><summary>What if we answer perfectly?</summary><p>Then the video says so, and we tell you what we’d still automate after the call: follow-up, reminders, the review request. Or that you don’t need us. We’ve said that before.</p></details>
+    <details><summary>Is this an AI robot calling?</summary><p>No. A person calls. The Pipeline we build uses software for the texts, bookings and reminders, and a human for the conversation. Nothing pretends to be you.</p></details>
+    <details><summary>What does the Pipeline cost?</summary><p>$4,500, fixed, in writing before we start. Live in 10 business days. Support is $297 a month and you can cancel anytime. We promise scope and schedule, not results.</p></details>
+  </div>
+</section>
+
+<footer>
+  <a class="logo" href="../" aria-label="Automate Great home"><img src="../img/logo-snake.svg" alt="" width="56" height="48"></a>
+  <ul><li><a href="../">Home</a></li><li><a href="../miami-ai-automation/">Miami AI automation</a></li><li><a href="../pipeline/">The Pipeline</a></li><li><a href="../contractors/">Contractors</a></li><li><a href="../privacy/">Privacy Policy</a></li><li><a href="../terms/">Terms of Service</a></li></ul>
+  <div class="copy contact"><span><span class="nw">10 PERCENTERS LLC, doing business as Automate Great</span> · <span class="nw">Serving Miami-Dade County, FL</span> · <a href="mailto:info@automategreat.com">info@automategreat.com</a> · <a href="tel:+17867060482">(786) 706-0482</a></span></div>
+  <div class="copy"><span>© 2026 Automate Great · 10 Percenters LLC · Miami, FL</span></div>
+</footer>
+
+</main>
+
+<script src="../main.js"></script>
+<script>
+(function(){
+  // ---- CONFIG: set once Apollo creates the HighLevel inbound webhook (Workflow → Inbound Webhook trigger) ----
+  var ENDPOINT = window.AG_START_ENDPOINT || "";           // e.g. https://services.leadconnectorhq.com/hooks/NQdVp7WD1DaO6cuqTCDn/webhook-trigger/XXXX
+  var BOOK_URL = "https://go.automategreat.com/book";       // HighLevel calendar: Automate Great – Free 20-min Call
+
+  var form = document.getElementById('fridayTest');
+  var err  = document.getElementById('formErr');
+  var btn  = document.getElementById('submitBtn');
+
+  // UTMs + referrer → hidden fields (persist in sessionStorage so a refresh keeps them)
+  try {
+    var qs = new URLSearchParams(location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+      var v = qs.get(k) || sessionStorage.getItem('ag_'+k) || '';
+      if (qs.get(k)) sessionStorage.setItem('ag_'+k, qs.get(k));
+      form.elements[k].value = v;
+    });
+    form.elements.referrer.value = document.referrer || '';
+  } catch(e){}
+
+  function score(d){
+    var s = 0;
+    s += ({'Monday':3,'Not sure':3,'Next morning':2,'Within the hour':1,'Within minutes':0})[d.q_friday] || 0;
+    s += ({'10-24':3,'25-99':3,'5-9':1,'1-4':0,'100+':0})[d.q_headcount] || 0;
+    s += ({'30-100':3,'100+':3,'10-30':2,'Under 10':0})[d.q_leads] || 0;
+    s += ({'Yes':3,'Probably':1,'Not at that level':0})[d.q_invest] || 0;
+    s += ({'Just me':2,'One partner':1,'Manager or committee':0})[d.q_signoff] || 0;
+    return s;
+  }
+  function tier(s){ return s >= 10 ? 'hot' : s >= 6 ? 'warm' : 'cold'; }
+  function digits(v){ return (v||'').replace(/\D/g,''); }
+
+  function showErr(msg, el){
+    err.textContent = msg; err.classList.add('on');
+    if (el){ el.closest('.f, .chk').classList.add('bad'); el.focus(); }
+  }
+
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    err.classList.remove('on');
+    form.querySelectorAll('.bad').forEach(function(x){ x.classList.remove('bad'); });
+
+    if (form.elements.company_fax.value) return; // honeypot
+
+    var req = ['first_name','business_name','phone','phone_confirm','email','q_friday','q_headcount','q_leads','q_invest','q_signoff'];
+    for (var i=0;i<req.length;i++){
+      var el = form.elements[req[i]];
+      if (!el.value) return showErr('Please fill in the highlighted field.', el);
+    }
+    var p1 = digits(form.elements.phone.value), p2 = digits(form.elements.phone_confirm.value);
+    if (p1.length < 10) return showErr('Enter the full business number, including area code.', form.elements.phone);
+    if (p1 !== p2) return showErr('The two phone numbers don’t match. That’s the line we’ll test, so it has to be right.', form.elements.phone_confirm);
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.elements.email.value)) return showErr('That email doesn’t look right.', form.elements.email);
+    if (!form.elements.friday_test_ok.checked) return showErr('We need your permission to run the Friday test.', form.elements.friday_test_ok);
+    if (!form.elements.sms_consent.checked) return showErr('Please agree to the text messages — that’s how the Monday video reaches you.', form.elements.sms_consent);
+
+    var data = {};
+    Array.prototype.forEach.call(form.elements, function(el){ if (el.name && el.type !== 'submit') data[el.name] = (el.type==='checkbox') ? (el.checked ? 'yes' : 'no') : el.value; });
+    delete data.company_fax; delete data.phone_confirm;
+    data.phone = '+1' + p1.slice(-10);
+    data.ag_score = score(data); data.ag_tier = tier(data.ag_score);
+    data.submitted_at = new Date().toISOString();
+    form.elements.ag_score.value = data.ag_score; form.elements.ag_tier.value = data.ag_tier;
+
+    btn.disabled = true; btn.firstChild.textContent = 'Sending… ';
+
+    var next = BOOK_URL + '?score=' + data.ag_score + '&tier=' + data.ag_tier + '&first_name=' + encodeURIComponent(data.first_name) + '&email=' + encodeURIComponent(data.email) + '&phone=' + encodeURIComponent(data.phone);
+
+    if (!ENDPOINT){ // not wired yet: fail loudly in dev, never silently
+      btn.disabled = false; btn.firstChild.textContent = 'Run my 7 pm Friday Test ';
+      return showErr('This form isn’t connected yet. Email info@automategreat.com and we’ll run your test by hand.');
+    }
+
+    fetch(ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(data), keepalive:true })
+      .then(function(r){ if (!r.ok) throw new Error('HTTP '+r.status); location.href = next; })
+      .catch(function(){
+        // Retry once with no-cors (opaque) so a CORS quirk never loses a lead, then move on to booking.
+        fetch(ENDPOINT, { method:'POST', mode:'no-cors', body: JSON.stringify(data), keepalive:true }).finally(function(){ location.href = next; });
+      });
+  });
+})();
+</script>
+</body>
+</html>
