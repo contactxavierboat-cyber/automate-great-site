@@ -223,8 +223,8 @@
 <script src="../main.js"></script>
 <script>
 (function(){
-  // ---- CONFIG: set once Apollo creates the HighLevel inbound webhook (Workflow → Inbound Webhook trigger) ----
-  var ENDPOINT = window.AG_START_ENDPOINT || "";           // e.g. https://services.leadconnectorhq.com/hooks/NQdVp7WD1DaO6cuqTCDn/webhook-trigger/XXXX
+  // ---- CONFIG: HighLevel inbound webhook → workflow "AG – Friday Test intake" (sub-account Automate Great) ----
+  var ENDPOINT = window.AG_START_ENDPOINT || "https://services.leadconnectorhq.com/hooks/NQdVp7WD1DaO6cuqTCDn/webhook-trigger/7b539d15-19bc-43b8-8925-7c1499fde1e8";
   var BOOK_URL = "https://go.automategreat.com/book";       // HighLevel calendar: Automate Great – Free 20-min Call
 
   var form = document.getElementById('fridayTest');
